@@ -1,0 +1,184 @@
+.App {
+    width: 100%;
+}
+
+/* ---------- Preloader ---------- */
+.preloader {
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+.preloader.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/* ---------- Fonts & Headers ---------- */
+.font-display {
+    font-family: 'Viaoda Libre', serif;
+}
+.font-body {
+    font-family: 'Imprima', sans-serif;
+}
+
+/* ---------- Sticky Video Layout ---------- */
+.sticky-video-container {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* ---------- Glass surfaces ---------- */
+.glass {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(8px);
+    border-left: 4px solid var(--crimson);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+}
+
+/* ---------- Section capabilities & items ---------- */
+.capabilities-grid-item {
+    position: relative;
+    background: #0c0c0e;
+    padding: 2rem;
+    transition: background-color 0.5s ease;
+}
+.capabilities-grid-item:hover {
+    background-color: #121214;
+}
+.capabilities-grid-item::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: #ff6b5e;
+    transition: width 0.55s ease;
+}
+.capabilities-grid-item:hover::after {
+    width: 100%;
+}
+
+/* ---------- Interactive Gallery ---------- */
+.gallery-figure {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    opacity: 0;
+    transform: scale(0.96);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.gallery-figure.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+.gallery-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: transform 1.2s cubic-bezier(0, 0, 0.2, 1);
+}
+.gallery-figure:hover .gallery-img {
+    transform: scale(1.1);
+}
+.gallery-caption {
+    position: absolute;
+    inset-x: 0;
+    bottom: 0;
+    transform: translateY(8px);
+    padding: 1.25rem;
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    background: linear-gradient(to top, rgba(10, 10, 11, 0.8), transparent 55%);
+}
+.gallery-figure:hover .gallery-caption {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* ---------- Custom Marquee Running ---------- */
+.marquee-container {
+    overflow: hidden;
+    white-space: nowrap;
+    display: flex;
+    width: 100%;
+}
+.marquee-content {
+    display: flex;
+    width: max-content;
+    animation: marquee 26s linear infinite;
+}
+
+/* ---------- Pulse and Bobbing Effects ---------- */
+.animate-bob {
+    animation: bobUp 1.8s ease-in-out infinite;
+}
+
+/* ---------- CTA Button primary / ghost ---------- */
+.btn-primary-ref {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #ffffff;
+    color: #1a1a1a;
+    border: none;
+    border-radius: 999px;
+    padding: 16px 30px;
+    font-family: 'Imprima', sans-serif;
+    font-size: 15px;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+    transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+}
+.btn-primary-ref:hover {
+    transform: translateY(-3px);
+    background-color: var(--crimson);
+    color: #ffffff;
+    box-shadow: 0 16px 40px rgba(138, 28, 20, 0.28);
+}
+
+.btn-ghost-ref {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 999px;
+    padding: 14px 26px;
+    font-family: 'Imprima', sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    transition: border-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+.btn-ghost-ref:hover {
+    border-color: var(--crimson);
+    color: var(--crimson);
+    transform: translateY(-2px);
+}
+
+.spin-sm {
+    width: 16px;
+    height: 16px;
+    border: 1.5px solid rgba(255, 255, 255, 0.4);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: spin360 0.8s linear infinite;
+}
+
+/* Animations for entries */
+.transition-all-500 {
+    transition: all 0.5s ease-in-out;
+}
