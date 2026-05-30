@@ -1,5 +1,6 @@
+
 # Beijing Institute of Technology — Architectural Evolution
-<img width="1242" height="688" alt="‏لقطة الشاشة ٢٠٢٦-٠٥-٣١ في ١ ٥٩ ٣٢ ص" src="https://github.com/user-attachments/assets/e0e4925d-5325-49f9-a62f-7fcde1e46168" />
+<img width="1242" height="688" alt="‏لقطة الشاشة ٢٠٢٦-٠٥-٣١ في ١ ٥٩ ٣٢ ص" src="https://github.com/user-attachments/assets/e0e4925d-5325-49f9-a62f-7fcde1e46168" /><img width="1242" height="695" alt="‏لقطة الشاشة ٢٠٢٦-٠٥-٣١ في ٢ ٠٠ ٤٠ ص" src="https://github.com/user-attachments/assets/06b2baf8-e61e-49b1-9958-f6907cc3513b" />
 
 React frontend + FastAPI backend project for an immersive landing page.
 
